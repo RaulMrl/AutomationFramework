@@ -5,14 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Support.PageObjects;
+using AutomationFramework.PageObjectsLeft;
 
 namespace AutomationFramework.PageObjects
 {
-    class Flights
+    class Flights : PageObject
     {
-        private IWebDriver driver;
-
-        [FindsBy(How = How.LinkText, Using = "mercuryreservation.php")]
-        public IWebElement FlightsElement { get; set; }
+        public IWebElement FlightsElement => WebDriver.FindElement(By.LinkText("mercuryreservation.php"));
     }
 }

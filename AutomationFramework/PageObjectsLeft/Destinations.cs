@@ -5,14 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Support.PageObjects;
+using AutomationFramework.PageObjectsLeft;
 
 namespace AutomationFramework.PageObjects
 {
-    class Destinations
+    class Destinations : PageObject
     {
-        private IWebDriver driver;
-
-        [FindsBy(How = How.LinkText, Using = "mercuryunderconst.php")]
-        public IWebElement DestinationsElement { get; set; }
+        public IWebElement DestinationsElement => WebDriver.FindElement(By.LinkText("mercuryunderconst.php"));
     }
 }

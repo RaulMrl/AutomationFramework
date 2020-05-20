@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutomationFramework.PageObjectsLeft;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
 namespace AutomationFramework.PageObjects
 {
-    class Home
+    class Home : PageObject
     {
-        private IWebDriver driver;
-
-        [FindsBy(How = How.LinkText, Using = "mercurywelcome.php")]
-        public IWebElement HomeElement { get; set; }
+        public IWebElement HomeElement => WebDriver.FindElement(By.LinkText("mercurywelcome.php"));
     }
 }
