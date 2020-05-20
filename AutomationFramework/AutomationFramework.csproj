@@ -52,6 +52,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="PageObjectsLeft\CarRentals.cs" />
+    <Compile Include="PageObjectsLeft\Cruises.cs" />
+    <Compile Include="PageObjectsLeft\Destinations.cs" />
+    <Compile Include="PageObjectsLeft\Flights.cs" />
+    <Compile Include="PageObjectsLeft\Home.cs" />
+    <Compile Include="PageObjectsLeft\Hotels.cs" />
+    <Compile Include="PageObjectsLeft\Vacations.cs" />
+    <Compile Include="PageObjectsRight\Contact.cs" />
+    <Compile Include="PageObjectsRight\Register.cs" />
+    <Compile Include="PageObjectsRight\SignOn.cs" />
+    <Compile Include="PageObjectsRight\Support.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCases\LoginTest.cs" />
   </ItemGroup>
