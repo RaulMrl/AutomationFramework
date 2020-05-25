@@ -57,6 +57,34 @@ namespace AutomationFramework.TestCases
             Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("User Name"));
         }
 
+
+        [Test]
+        public void CheckYourDestinationLink()
+        {
+            PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
+            HomeScreen.YourDestination.Click();
+            Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("Destination"));
+        }
+
+        
+        [Test]
+        public void CheckRegisterHereLink()
+        {
+            PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
+            HomeScreen.RegisterHere.Click();
+            Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("account"));
+        }
+
+
+        [Test]
+        public void CheckBusinessTravelLink()
+        {
+            PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
+            HomeScreen.BusinessTravel.Click();
+            Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("Business"));
+        }
+
+
         [TearDown]
         public void CleanUp()
         {
