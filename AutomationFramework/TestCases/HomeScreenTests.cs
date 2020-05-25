@@ -59,7 +59,7 @@ namespace AutomationFramework.TestCases
 
 
         [Test]
-        public void CheckYourDestinationLink()
+        public void YourDestinationLink()
         {
             PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
             HomeScreen.YourDestination.Click();
@@ -68,7 +68,7 @@ namespace AutomationFramework.TestCases
 
         
         [Test]
-        public void CheckRegisterHereLink()
+        public void RegisterHereLink()
         {
             PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
             HomeScreen.RegisterHere.Click();
@@ -77,7 +77,7 @@ namespace AutomationFramework.TestCases
 
 
         [Test]
-        public void CheckBusinessTravelLink()
+        public void BusinessTravelLink()
         {
             PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
             HomeScreen.BusinessTravel.Click();

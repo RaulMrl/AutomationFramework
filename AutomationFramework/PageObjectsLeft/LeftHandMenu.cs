@@ -10,12 +10,12 @@ namespace AutomationFramework
 {
     class LeftHandMenu : PageObject
     {
-        public IWebElement Home => WebDriver.FindElement(By.LinkText("mercurywelcome.php"));
-        public IWebElement Flights => WebDriver.FindElement(By.LinkText("mercuryreservation.php"));
-        public IWebElement Hotels => WebDriver.FindElement(By.LinkText("mercuryunderconst.php"));
-        public IWebElement CarRentals => WebDriver.FindElement(By.LinkText("mercuryunderconst.php"));
-        public IWebElement Cruises => WebDriver.FindElement(By.LinkText("mercurycruise.php"));
-        public IWebElement Destinations => WebDriver.FindElement(By.LinkText("mercuryunderconst.php"));
-        public IWebElement VacationsElement => WebDriver.FindElement(By.LinkText("mercuryunderconst.php"));
+        public IWebElement HomeElement => WebDriver.FindElement(By.PartialLinkText("Home"));
+        public IWebElement FlightsElement => WebDriver.FindElement(By.PartialLinkText("Flights"));
+        public IWebElement HotelsElement => WebDriver.FindElement(By.PartialLinkText("Hotels"));
+        public IWebElement CarRentalsElement => WebDriver.FindElement(By.PartialLinkText("Car Rentals"));
+        public IWebElement CruisesElement => WebDriver.FindElement(By.PartialLinkText("Cruises"));
+        public IWebElement DestinationsElement => WebDriver.FindElement(By.PartialLinkText("Destinations"));
+        public IWebElement VacationsElement => WebDriver.FindElement(By.PartialLinkText("Vacations"));
     }
 }

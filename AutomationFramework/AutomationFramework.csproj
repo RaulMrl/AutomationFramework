@@ -60,6 +60,8 @@
     <Compile Include="PageObjectsLeft\HomeScreen.cs" />
     <Compile Include="PageObjectsLeft\PageObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestCases\LeftHandMenuTests.cs" />
+    <Compile Include="TestCases\TopMenuTests.cs" />
     <Compile Include="TestCases\HomeScreenTests.cs" />
     <Compile Include="PageObjectsLeft\TopMenu.cs" />
   </ItemGroup>
