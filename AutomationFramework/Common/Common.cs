@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutomationFramework.PageObjectsLeft
+namespace AutomationFramework.Common
 {
-    class PageObject
+    class Common
     {
-        public IWebDriver WebDriver;
+        public static IWebDriver driver { get; set; }
     }
 }
-
