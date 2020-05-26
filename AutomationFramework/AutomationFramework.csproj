@@ -57,7 +57,6 @@
     <Compile Include="Class.cs" />
     <Compile Include="Common\Common.cs" />
     <Compile Include="PageObjectsLeft\SignOnPage.cs" />
-    <Compile Include="PageObjectsLeft\UnderConstructionPage.cs" />
     <Compile Include="PageObjectsLeft\RegisterPage.cs" />
     <Compile Include="PageObjectsLeft\LeftHandMenu.cs" />
     <Compile Include="PageObjectsLeft\HomeScreen.cs" />

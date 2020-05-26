@@ -27,7 +27,7 @@ namespace AutomationFramework.TestCases
         }
 
         [Test]
-        public void LogInWithValidData()
+        public void RegisterWithValidData()
         {
             RegisterPage.Register("FirstNameTest",
                                   "LastNameTest",
@@ -46,7 +46,7 @@ namespace AutomationFramework.TestCases
         }
 
         [Test]
-        public void LogInWithInvalidData()
+        public void RegisterWithInvalidData()
         {
             RegisterPage.Register("invalid",
                                   "invalid",
@@ -66,7 +66,7 @@ namespace AutomationFramework.TestCases
 
 
         [Test]
-        public void LogInWithNoData()
+        public void RegisterWithNoData()
         {
             RegisterPage.Register("","","","","","","","","","","","","");
             Assert.IsTrue(RegisterPage.BodyElement.Text.Contains("Invalid"));
