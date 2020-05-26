@@ -29,36 +29,32 @@ namespace AutomationFramework.TestCases
         [Test]
         public void SignOnLink()
         {
-            PageFactory.InitElements(TopMenu.WebDriver, TopMenu);
-            TopMenu.SingOnElement.Click();
-            Assert.IsTrue(TopMenu.WebDriver.FindElement(By.TagName("body")).Text.Contains("User Name"));
+            TopMenu.SignOnLinkClick();
+            Assert.IsTrue(TopMenu.BodyElement.Text.Contains("User Name"));
         }
 
 
         [Test]
         public void RegisterLink()
         {
-            PageFactory.InitElements(TopMenu.WebDriver, TopMenu);
-            TopMenu.RegisterElement.Click();
-            Assert.IsTrue(TopMenu.WebDriver.FindElement(By.TagName("body")).Text.Contains("First Name"));
+            TopMenu.RegisterLinkClick();
+            Assert.IsTrue(TopMenu.BodyElement.Text.Contains("First Name"));
         }
 
 
         [Test]
         public void SupportLink()
         {
-            PageFactory.InitElements(TopMenu.WebDriver, TopMenu);
-            TopMenu.SupportElement.Click();
-            Assert.IsTrue(TopMenu.WebDriver.FindElement(By.TagName("body")).Text.Contains("Support"));
+            TopMenu.SupportLinkClick();
+            Assert.IsTrue(TopMenu.BodyElement.Text.Contains("Support"));
         }
 
 
         [Test]
         public void ContactLink()
         {
-            PageFactory.InitElements(TopMenu.WebDriver, TopMenu);
-            TopMenu.ContactElement.Click();
-            Assert.IsTrue(TopMenu.WebDriver.FindElement(By.TagName("body")).Text.Contains("Contact"));
+            TopMenu.ContactLinkClick();
+            Assert.IsTrue(TopMenu.BodyElement.Text.Contains("Contact"));
         }
 
 

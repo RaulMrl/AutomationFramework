@@ -29,59 +29,47 @@ namespace AutomationFramework.TestCases
         [Test]
         public void LogInWithValidData()
         {
-            PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
-            HomeScreen.UserName.SendKeys("UserNameTest");
-            HomeScreen.Password.SendKeys("pass");
-            HomeScreen.SignIn.Submit();
-            Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("Welcome UserNameTest"));
+            HomeScreen.LogIn("UserNameTest", "pass");
+            Assert.IsTrue(HomeScreen.BodyElement.Text.Contains("Welcome UserNameTest"));
         }
 
         [Test]
         public void LogInWithInvalidData()
         {
-            PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
-            HomeScreen.UserName.SendKeys("invalid");
-            HomeScreen.Password.SendKeys("invalid");
-            HomeScreen.SignIn.Submit();
-            Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("User Name"));
+            HomeScreen.LogIn("invalid", "invalid");
+            Assert.IsTrue(HomeScreen.BodyElement.Text.Contains("User Name"));
         }
 
 
         [Test]
         public void LogInWithNoData()
         {
-            PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
-            HomeScreen.UserName.SendKeys("");
-            HomeScreen.Password.SendKeys("");
-            HomeScreen.SignIn.Submit();
-            Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("User Name"));
+            HomeScreen.LogIn("", "");
+            Assert.IsTrue(HomeScreen.BodyElement.Text.Contains("User Name"));
         }
 
 
         [Test]
         public void YourDestinationLink()
         {
-            PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
-            HomeScreen.YourDestination.Click();
-            Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("Destination"));
+            HomeScreen.YourDestinationLinkClick();
+            Assert.IsTrue(HomeScreen.BodyElement.Text.Contains("Select Destination"));
         }
 
         
         [Test]
         public void RegisterHereLink()
         {
-            PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
-            HomeScreen.RegisterHere.Click();
-            Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("account"));
+            HomeScreen.RegisterHereLinkClick();
+            Assert.IsTrue(HomeScreen.BodyElement.Text.Contains("account"));
         }
 
 
         [Test]
         public void BusinessTravelLink()
         {
-            PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
-            HomeScreen.BusinessTravel.Click();
-            Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("Business"));
+            HomeScreen.BusinessTravelLinkClick();
+            Assert.IsTrue(HomeScreen.BodyElement.Text.Contains("Business"));
         }
 
 

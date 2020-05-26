@@ -29,61 +29,54 @@ namespace AutomationFramework.TestCases
         [Test]
         public void HomeLink()
         {
-            PageFactory.InitElements(LeftHandMenu.WebDriver, LeftHandMenu);
-            LeftHandMenu.HomeElement.Click();
-            Assert.IsTrue(LeftHandMenu.WebDriver.FindElement(By.TagName("body")).Text.Contains("Registered users can sign-in"));
+            LeftHandMenu.HomeLinkClick();
+            Assert.IsTrue(LeftHandMenu.BodyElement.Text.Contains("Registered users can sign-in"));
         }
 
 
         [Test]
         public void FlightsLink()
         {
-            PageFactory.InitElements(LeftHandMenu.WebDriver, LeftHandMenu);
-            LeftHandMenu.FlightsElement.Click();
-            Assert.IsTrue(LeftHandMenu.WebDriver.FindElement(By.TagName("body")).Text.Contains("find a flight"));
+            LeftHandMenu.FlightsLinkClick();
+            Assert.IsTrue(LeftHandMenu.BodyElement.Text.Contains("find a flight"));
         }
 
 
         [Test]
         public void HotelsLink()
         {
-            PageFactory.InitElements(LeftHandMenu.WebDriver, LeftHandMenu);
-            LeftHandMenu.HotelsElement.Click();
-            Assert.IsTrue(LeftHandMenu.WebDriver.FindElement(By.TagName("body")).Text.Contains("find a hotel"));
+            LeftHandMenu.HotelsLinkClick();
+            Assert.IsTrue(LeftHandMenu.BodyElement.Text.Contains("find a hotel"));
         }
 
 
         [Test]
         public void CarRentalsLink()
         {
-            PageFactory.InitElements(LeftHandMenu.WebDriver, LeftHandMenu);
-            LeftHandMenu.CarRentalsElement.Click();
-            Assert.IsTrue(LeftHandMenu.WebDriver.FindElement(By.TagName("body")).Text.Contains("rent a car"));
+            LeftHandMenu.CarRentalsLinkClick();
+            Assert.IsTrue(LeftHandMenu.BodyElement.Text.Contains("rent a car"));
         }
 
         [Test]
         public void CruisesLink()
         {
-            PageFactory.InitElements(LeftHandMenu.WebDriver, LeftHandMenu);
-            LeftHandMenu.CruisesElement.Click();
-            Assert.IsTrue(LeftHandMenu.WebDriver.FindElement(By.TagName("body")).Text.Contains("Cruise"));
+            LeftHandMenu.CruisesLinkClick();
+            Assert.IsTrue(LeftHandMenu.BodyElement.Text.Contains("Cruise"));
         }
 
         [Test]
-        public void Destinations()
+        public void DestinationsLink()
         {
-            PageFactory.InitElements(LeftHandMenu.WebDriver, LeftHandMenu);
-            LeftHandMenu.DestinationsElement.Click();
-            Assert.IsTrue(LeftHandMenu.WebDriver.FindElement(By.TagName("body")).Text.Contains("find your destinations"));
+            LeftHandMenu.DestinationsLinkClick();
+            Assert.IsTrue(LeftHandMenu.BodyElement.Text.Contains("find your destinations"));
         }
 
 
         [Test]
-        public void Vacations()
+        public void VacationsLink()
         {
-            PageFactory.InitElements(LeftHandMenu.WebDriver, LeftHandMenu);
-            LeftHandMenu.VacationsElement.Click();
-            Assert.IsTrue(LeftHandMenu.WebDriver.FindElement(By.TagName("body")).Text.Contains("find your vacations"));
+            LeftHandMenu.VacationsLinkClick();
+            Assert.IsTrue(LeftHandMenu.BodyElement.Text.Contains("find your vacations"));
         }
 
         [TearDown]

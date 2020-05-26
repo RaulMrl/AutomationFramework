@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AutomationFramework.PageObjectsLeft
 {
-    class HomeScreen : PageObject
+    class UnderContruction : PageObject
     {
         public IWebElement UserName => WebDriver.FindElement(By.Name("userName"));
         public IWebElement Password => WebDriver.FindElement(By.Name("password"));
@@ -17,27 +17,5 @@ namespace AutomationFramework.PageObjectsLeft
         public IWebElement RegisterHere => WebDriver.FindElement(By.PartialLinkText("Register here"));
         public IWebElement BusinessTravel => WebDriver.FindElement(By.PartialLinkText("Business Travel"));
         public IWebElement BodyElement => WebDriver.FindElement(By.TagName("body"));
-
-        public void LogIn(string userName, string password)
-        {
-            UserName.SendKeys(userName);
-            Password.SendKeys(password);
-            SignIn.Submit();
-        }
-
-        public void YourDestinationLinkClick()
-        {
-            YourDestination.Click();
-        }
-
-        public void RegisterHereLinkClick()
-        {
-            RegisterHere.Click();
-        }
-
-        public void BusinessTravelLinkClick()
-        {
-            BusinessTravel.Click();
-        }
     }
 }
