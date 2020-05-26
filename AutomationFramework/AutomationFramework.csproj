@@ -56,13 +56,15 @@
   <ItemGroup>
     <Compile Include="Class.cs" />
     <Compile Include="Common\Common.cs" />
-    <Compile Include="PageObjectsLeft\UnderConstructuionPage.cs" />
+    <Compile Include="PageObjectsLeft\SignOnPage.cs" />
+    <Compile Include="PageObjectsLeft\UnderConstructionPage.cs" />
     <Compile Include="PageObjectsLeft\RegisterPage.cs" />
     <Compile Include="PageObjectsLeft\LeftHandMenu.cs" />
     <Compile Include="PageObjectsLeft\HomeScreen.cs" />
     <Compile Include="PageObjectsLeft\PageObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestCases\RegisterTests.cs" />
+    <Compile Include="TestCases\SignOnPageTests.cs" />
+    <Compile Include="TestCases\RegisterPageTests.cs" />
     <Compile Include="TestCases\LeftHandMenuTests.cs" />
     <Compile Include="TestCases\TopMenuTests.cs" />
     <Compile Include="TestCases\HomeScreenTests.cs" />
