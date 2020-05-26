@@ -17,79 +17,66 @@ namespace AutomationFramework.TestCases
     {
         public RegisterPage RegisterPage;
 
-        //[SetUp]
-        //public void Initialize()
-        //{
-        //    RegisterPage = new RegisterPage();
-        //    RegisterPage.WebDriver = new ChromeDriver();
-        //    RegisterPage.WebDriver.Url = "http://newtours.demoaut.com/mercuryregister.php";
-        //    Console.WriteLine("Opened URL");
-        //}
+        [SetUp]
+        public void Initialize()
+        {
+            RegisterPage = new RegisterPage();
+            RegisterPage.WebDriver = new ChromeDriver();
+            RegisterPage.WebDriver.Url = "http://newtours.demoaut.com/mercuryregister.php";
+            Console.WriteLine("Opened URL");
+        }
 
-        //[Test]
-        //public void LogInWithValidData()
-        //{
-        //    PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
-        //    HomeScreen.UserName.SendKeys("UserNameTest");
-        //    HomeScreen.Password.SendKeys("pass");
-        //    HomeScreen.SignIn.Submit();
-        //    Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("Welcome UserNameTest"));
-        //}
+        [Test]
+        public void LogInWithValidData()
+        {
+            RegisterPage.Register("FirstNameTest",
+                                  "LastNameTest",
+                                  "1234567891",
+                                  "test.test@test.com",
+                                  "AddressTestLine1",
+                                  "AddressTestLine2",
+                                  "CityTest",
+                                  "StateTest",
+                                  "123456",
+                                  "UNITED STATES",
+                                  "UserNameTest",
+                                  "pass",
+                                  "pass");
+            Assert.IsTrue(RegisterPage.BodyElement.Text.Contains("Thank you for registering"));
+        }
 
-        //[Test]
-        //public void LogInWithInvalidData()
-        //{
-        //    PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
-        //    HomeScreen.UserName.SendKeys("invalid");
-        //    HomeScreen.Password.SendKeys("invalid");
-        //    HomeScreen.SignIn.Submit();
-        //    Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("User Name"));
-        //}
-
-
-        //[Test]
-        //public void LogInWithNoData()
-        //{
-        //    PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
-        //    HomeScreen.UserName.SendKeys("");
-        //    HomeScreen.Password.SendKeys("");
-        //    HomeScreen.SignIn.Submit();
-        //    Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("User Name"));
-        //}
-
-
-        //[Test]
-        //public void YourDestinationLink()
-        //{
-        //    PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
-        //    HomeScreen.YourDestination.Click();
-        //    Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("Destination"));
-        //}
-
-        
-        //[Test]
-        //public void RegisterHereLink()
-        //{
-        //    PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
-        //    HomeScreen.RegisterHere.Click();
-        //    Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("account"));
-        //}
+        [Test]
+        public void LogInWithInvalidData()
+        {
+            RegisterPage.Register("invalid",
+                                  "invalid",
+                                  "1",
+                                  "asd",
+                                  "invalid",
+                                  "invalid",
+                                  "invalid",
+                                  "invalid",
+                                  "1",
+                                  "UNITED STATES",
+                                  "invalid",
+                                  "i",
+                                  "i");
+            Assert.IsTrue(RegisterPage.BodyElement.Text.Contains("Invalid"));
+        }
 
 
-        //[Test]
-        //public void BusinessTravelLink()
-        //{
-        //    PageFactory.InitElements(HomeScreen.WebDriver, HomeScreen);
-        //    HomeScreen.BusinessTravel.Click();
-        //    Assert.IsTrue(HomeScreen.WebDriver.FindElement(By.TagName("body")).Text.Contains("Business"));
-        //}
+        [Test]
+        public void LogInWithNoData()
+        {
+            RegisterPage.Register("","","","","","","","","","","","","");
+            Assert.IsTrue(RegisterPage.BodyElement.Text.Contains("Invalid"));
+        }
 
-
-        //[TearDown]
-        //public void CleanUp()
-        //{
-        //    HomeScreen.WebDriver.Quit();
-        //    Console.WriteLine("Closed the browser");
-        //}
+        [TearDown]
+        public void CleanUp()
+        {
+            RegisterPage.WebDriver.Quit();
+            Console.WriteLine("Closed the browser");
+        }
     }
 }
